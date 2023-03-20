@@ -46,6 +46,7 @@ header {
 nav {
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-inline: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +68,12 @@ nav {
 .nav_ul {
     display: flex;
     gap: 1rem;
+}
+
+@media (max-width: 810px) {
+    .nav_ul {
+        display: none;
+    }
 }
 
 .nav_li a {
@@ -93,6 +100,17 @@ nav {
     display: none;
 }
 
+.nav_bars a {
+    font-size: 2rem;
+    color: white;
+}
+
+@media (max-width: 810px) {
+    .nav_bars {
+        display: block;
+    }
+}
+
 /* jumbo */
 
 .jumbo_bg {
@@ -104,13 +122,14 @@ nav {
     margin-inline: auto;
     padding-top: 3rem;
     padding-bottom: 6rem;
+    padding-inline: 1.5rem;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .jumbo_item {
-    flex: 0 0 calc((100% - 3rem) / 3);
+    flex: 0 1 calc((100% - 3rem) / 3);
     border-radius: 1.5rem;
     padding-top: 2.5rem;
     padding-inline: 1.5rem;
@@ -125,6 +144,24 @@ nav {
     text-align: start;
 }
 
+@media (max-width: 810px) {
+    .jumbo_item, .jumbo_item.big {
+        padding-inline: 1rem;
+    }
+}
+
+@media (max-width: 627px) {
+    .jumbo_item {
+        flex: 1 0 0;
+    }
+}
+
+@media (max-width: 445px) {
+    .jumbo_item.big {
+        flex: 1 0 0;
+    }
+}
+
 .jumbo_item h2 {
     font-size: 1.4rem;
     margin-bottom: 2rem;
@@ -132,17 +169,25 @@ nav {
 }
 
 .jumbo_item p {
-    line-height: 1.8;
+    line-height: 1.7;
     margin-bottom: 2rem;
     color: #333333;
 }
 
 .jumbo_info {
     flex: 0 0 50%;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 810px) {
+    .jumbo_info {
+        flex: 0 0 100%;
+    }
 }
 
 .jumbo_info .btn_large {
     width: max-content;
+    font-size: 20px;
 }
 
 .jumbo_info .btn_large a {
@@ -164,11 +209,17 @@ nav {
 
 .jumbo_img img {
     display: block;
-    width: 220px;
+    height: 250px;
 }
 
-.jumbo_item .icon {
+@media (max-width: 375px) {
+    .jumbo_img {
+        flex: 0 0 100%;
+    }
+}
+
+.jumbo_item .icon i {
     font-size: 4.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--azure);
 }
