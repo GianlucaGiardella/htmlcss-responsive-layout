@@ -21,11 +21,23 @@ ol, ul {
     list-style: none;
 }
 
+.btn a {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.btn_large a {
+    display: block;
+    padding: 0.5em 2em;
+    border-radius: 1.5em;
+}
+
 a {
     text-decoration: none;
 }
 
-/* header */
+/* nav */
 
 header {
     background-color: var(--azure);
@@ -68,17 +80,95 @@ nav {
 }
 
 .btn a {
-    padding: 0.5em 1em;
-    border-radius: 1em;
     background-color: white;
     color: #333333;
 }
 
-.btn a:hover {
+.nav_li.btn a:hover {
     text-decoration: none;
     background-color: whitesmoke;
 }
 
 .nav_bars {
     display: none;
+}
+
+/* jumbo */
+
+.jumbo_bg {
+    background-color: white;
+}
+
+.jumbo_container {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.jumbo_item {
+    flex: 0 0 calc((100% - 3rem) / 3);
+    border-radius: 1.5rem;
+    padding-top: 2.5rem;
+    padding-inline: 1.5rem;
+    text-align: center;
+    background-color: var(--uranian-blue);
+}
+
+.jumbo_item.big {
+    flex: 0 0 calc((100% + 1.5rem) / 3 * 2 - 1.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+.jumbo_item h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--azure);
+}
+
+.jumbo_item p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.jumbo_info {
+    flex: 0 0 50%;
+}
+
+.jumbo_info .btn_large {
+    width: max-content;
+}
+
+.jumbo_info .btn_large a {
+    letter-spacing: 3px;
+    background-color: var(--azure);
+    color: white;
+}
+
+.jumbo_info .btn_large a:hover {
+    background-color: #2d9aff;
+}
+
+.jumbo_img {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.jumbo_img img {
+    display: block;
+    width: 220px;
+}
+
+.jumbo_item .icon {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color: var(--azure);
 }
