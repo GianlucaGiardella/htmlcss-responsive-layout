@@ -92,6 +92,7 @@ nav {
 .nav_li.btn a:hover {
     text-decoration: none;
     background-color: whitesmoke;
+    box-shadow: 2px 2px 3px;
 }
 
 .nav_bars {
@@ -202,23 +203,23 @@ nav {
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 665px) {
     .jumbo_item {
-        flex: 1 0 0;
+        flex: 0 0 calc(50% - 0.75rem);
     }
-}
 
-@media (max-width: 535px) {
     .jumbo_item.big {
         flex: 0 0 100%;
     }
 }
 
-@media (max-width: 437px) {
+@media (max-width: 445px) {
     .jumbo_item {
         flex: 0 0 100%;
     }
 }
+
+/* planning */
 
 .planning_bg {
     background-color: var(--tropical-indigo);
@@ -310,5 +311,76 @@ nav {
     .strategy h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+    }
+}
+
+/* testimonials */
+
+.testimonials_bg {
+    max-width: 1000px;
+    margin-inline: auto;
+    text-align: center;
+    padding: 4rem 0rem 7rem;
+}
+
+.testimonials_container {
+    padding-inline: 1.5rem;
+}
+
+.testimonials_container h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.testimonials_container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--tropical-indigo);
+}
+
+.testimonials_container p {
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem 2.5rem;
+    margin-bottom: 2rem;
+    text-align: start;
+    border-radius: 2.5rem;
+    background-color: var(--tropical-indigo);
+    color: white;
+}
+
+.card_img {
+    margin-inline-end: 3rem;
+}
+
+.card_img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.card_text p {
+    margin-bottom: 1.5rem;
+}
+
+.card_text p i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 555px) {
+    .card {
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .card_img {
+        margin: 0 0 1rem;
+        flex: 0 0 100%;
     }
 }
