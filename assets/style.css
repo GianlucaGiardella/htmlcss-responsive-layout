@@ -662,3 +662,38 @@ nav {
         font-size: 12px;
     }
 }
+
+/* footer */
+
+footer {
+    background-color: var(--jet);
+    padding: 2.5rem 0;
+}
+
+.footer_container {
+    max-width: 480px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.footer_container p {
+    line-height: 1.8;
+    margin-bottom: 3.5rem;
+}
+
+.footer_links {
+    line-height: 1.8;
+}
+
+.footer_links span a{
+    color: var(--tropical-indigo);
+    text-decoration: underline;
+}
+
+@media (max-width: 460px) {
+    footer {
+        font-size: 12px;
+    }
+}
