@@ -8,6 +8,7 @@
     --max-width: 1140px;
     --medium-width: 1050px;
     --small-width: 900px;
+    --padding-container: 1.5rem;
     --azure: #0084FD;
     --uranian-blue: #B5DDFF;
     --tropical-indigo: #9792E4;
@@ -24,7 +25,7 @@ ol, ul {
 }
 
 p {
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 a {
@@ -36,13 +37,13 @@ a {
 }
 
 .btn a {
-    display: block;
+    display: inline-block;
     padding: 0.5em 1em;
     border-radius: 1em;
 }
 
 .btn_large a {
-    display: block;
+    display: inline-block;
     padding: 0.5em 2em;
     border-radius: 1.5em;
 }
@@ -56,7 +57,7 @@ header {
 nav {
     max-width: var(--max-width);
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +133,7 @@ nav {
     margin-inline: auto;
     padding-top: 3rem;
     padding-bottom: 6rem;
-    padding-inline: 1rem;
+    padding-inline: var(--padding-container);
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
@@ -142,7 +143,7 @@ nav {
     flex: 0 1 calc((100% - 3rem) / 3);
     border-radius: 1.5rem;
     padding-top: 2.5rem;
-    padding-inline: 1.5rem;
+    padding-inline: 1rem;
     text-align: center;
     background-color: var(--uranian-blue);
 }
@@ -225,6 +226,12 @@ nav {
     }
 }
 
+@media (max-width: 375px) {
+    .jumbo_item.big {
+        justify-content: center;
+    }
+}
+
 /* planning */
 
 .planning_bg {
@@ -236,7 +243,7 @@ nav {
 .planning_container {
     max-width: var(--small-width);
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
     gap: 4rem;
     display: flex;
     flex-wrap: wrap;
@@ -301,6 +308,12 @@ nav {
     color: var(--tropical-indigo);
 }
 
+@media (max-width: 900px) {
+    .strategy .planning_img {
+        margin-bottom: 6rem;
+    }
+}
+
 @media (max-width: 810px) {
     .planning_bg {
         padding-top: 4rem;
@@ -312,10 +325,6 @@ nav {
 
     .strategy, .developement {
         flex: 0 0 100%;
-    }
-
-    .strategy .planning_img {
-        margin-bottom: 6rem;
     }
 
     .strategy h2 {
@@ -345,7 +354,7 @@ nav {
 }
 
 .testimonials_container {
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
 }
 
 .testimonials_container>h4 {
@@ -422,7 +431,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
 }
 
 .benefits_container>h2 {
@@ -598,7 +607,7 @@ nav {
 .get_started_container {
     max-width: 650px;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
     text-align: center;
 }
 
@@ -673,7 +682,7 @@ footer {
 .footer_container {
     max-width: 480px;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: var(--padding-container);
     text-align: center;
     color: whitesmoke;
 }
