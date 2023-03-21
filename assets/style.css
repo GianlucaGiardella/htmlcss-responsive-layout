@@ -6,6 +6,8 @@
 
 :root {
     --max-width: 1140px;
+    --medium-width: 1050px;
+    --small-width: 900px;
     --azure: #0084FD;
     --uranian-blue: #B5DDFF;
     --tropical-indigo: #9792E4;
@@ -230,7 +232,7 @@ nav {
 }
 
 .planning_container {
-    max-width: 900px;
+    max-width: var(--small-width);
     margin-inline: auto;
     padding-inline: 1.5rem;
     gap: 4rem;
@@ -342,7 +344,7 @@ nav {
 }
 
 .testimonials_container>p {
-    max-width: 1000px;
+    max-width: var(--small-width);
     margin-inline: auto;
     margin-bottom: 2.5rem;
     color: var(--jet);
@@ -367,7 +369,7 @@ nav {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 100px;
+    border-radius: 50%;
 }
 
 .card_text p {
@@ -467,5 +469,106 @@ nav {
 @media (max-width: 375px) {
     .benefits_container>h2 {
         font-size: 2rem;
+    }
+}
+
+/* about us */
+
+.about_us_bg {
+    padding: 5.5rem 0 4rem;
+}
+
+.about_us_container {
+    max-width: var(--medium-width);
+    margin-inline: auto;
+    padding-inline: 4rem;
+    display: flex;
+}
+
+.info {
+    flex: 1 0 0;
+    margin-inline-end: 6rem;
+}
+
+.info>h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+    color: var(--tropical-indigo);
+}
+
+.info p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+.profile {
+    flex: 0 0 30%;
+}
+
+.profile_img {
+    width: max-content;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.profile_img img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_img>i {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--tropical-indigo);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.profile>p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: var(--tropical-indigo);
+}
+
+.profile>.btn a {
+    width: max-content;
+    background-color: var(--tropical-indigo);
+    color: white;
+}
+
+.profile>.btn a i {
+    margin-inline-end: 5px;
+}
+
+.profile>.btn a:hover {
+    background-color: #a8a4e2;
+    box-shadow: 2px 2px 3px grey;
+}
+
+@media (max-width: 740px) {
+    .about_us_container {
+        padding-inline: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .info {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+
+    .profile {
+        flex: 0 0 60%;
+    }
+}
+
+@media (max-width: 445px) {
+    .profile {
+        flex: 0 0 100%;
     }
 }
